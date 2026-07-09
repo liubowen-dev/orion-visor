@@ -1,0 +1,160 @@
+/* src/css/command-center.less */
+
+// 指挥中心全局样式
+:root {
+  --command-primary: #4F8CFF;
+  --command-primary-glow: rgba(79, 140, 255, 0.4);
+  --command-secondary: #35D7FF;
+  --command-bg-dark: #0a0f1a;
+  --command-bg-card: rgba(10, 20, 35, 0.65);
+  --command-border: rgba(79, 140, 255, 0.2);
+  --command-text-primary: #e8f0ff;
+  --command-text-secondary: #8aa9d4;
+}
+
+// 数字滚动动画
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 脉冲动画
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// 发光边框动画
+@keyframes glowBorder {
+  0%, 100% {
+    border-color: rgba(79, 140, 255, 0.2);
+    box-shadow: 0 0 0 0 rgba(79, 140, 255, 0);
+  }
+  50% {
+    border-color: rgba(79, 140, 255, 0.6);
+    box-shadow: 0 0 20px rgba(79, 140, 255, 0.2);
+  }
+}
+
+// 数据卡片样式
+.command-card {
+  background: rgba(10, 20, 35, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--command-border);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: rgba(79, 140, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(79, 140, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .card-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--command-text-primary);
+      
+      i {
+        margin-right: 8px;
+        color: var(--command-primary);
+      }
+    }
+    
+    .card-extra {
+      font-size: 12px;
+      color: var(--command-text-secondary);
+    }
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+}
+
+// 仪表盘数值样式
+.command-metric {
+  .metric-value {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff, var(--command-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: countUp 0.6s ease;
+  }
+  
+  .metric-label {
+    font-size: 13px;
+    color: var(--command-text-secondary);
+    margin-top: 8px;
+  }
+  
+  .metric-trend {
+    font-size: 12px;
+    margin-top: 4px;
+    
+    &.up {
+      color: #52c41a;
+    }
+    
+    &.down {
+      color: #f5222d;
+    }
+  }
+}
+
+// 告警条目样式
+.command-alert-item {
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+  
+  &.critical {
+    border-left-color: #f5222d;
+  }
+  
+  &.warning {
+    border-left-color: #faad14;
+  }
+  
+  &.info {
+    border-left-color: #1890ff;
+  }
+  
+  &:hover {
+    background: rgba(79, 140, 255, 0.08);
+    transform: translateX(4px);
+  }
+}
+
+// 图表容器样式
+.command-chart-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+  
+  canvas {
+    filter: drop-shadow(0 0 4px rgba(79, 140, 255, 0.2));
+  }
+}

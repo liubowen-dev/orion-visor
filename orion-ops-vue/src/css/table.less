@@ -1,0 +1,112 @@
+/* src/css/table.less */
+
+/* 表格容器 */
+.ant-table-wrapper {
+  background: transparent;
+}
+
+/* 表格主体 */
+.ant-table {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 表头 */
+.ant-table-thead > tr > th {
+  background: #F8FAFF !important;
+  color: #475569 !important;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid #E2E8F0 !important;
+  padding: 14px 16px !important;
+}
+
+/* 表格行 */
+.ant-table-tbody > tr > td {
+  color: #1E293B !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+  padding: 14px 16px !important;
+}
+
+/* 行悬停 */
+.ant-table-tbody > tr:hover > td {
+  background: #F8FAFF !important;
+}
+
+/* 斑马纹 */
+.ant-table-tbody > tr:nth-child(even) {
+  background: #FEFEFE;
+}
+
+/* 空状态 */
+.ant-table-placeholder {
+  background: white !important;
+  color: #94A3B8 !important;
+}
+
+/* 固定表头 */
+.ant-table-header {
+  background: #F8FAFF;
+}
+
+/* 分页 */
+.ant-pagination {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.ant-pagination-item {
+  background: white;
+  border-color: #E2E8F0;
+  border-radius: 8px;
+}
+
+.ant-pagination-item a {
+  color: #475569;
+}
+
+.ant-pagination-item-active {
+  background: #3B82F6;
+  border-color: #3B82F6;
+}
+
+.ant-pagination-item-active a {
+  color: white;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  background: white;
+  border-color: #E2E8F0;
+  border-radius: 8px;
+  color: #64748B;
+}
+
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+/* 表格工具栏 */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.table-toolbar-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.table-toolbar-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}

@@ -1,0 +1,5 @@
+orion:
+  ops:
+    access:
+      host: http://gz12188ck945.vicp.fun:28049
+      secret: ops_access

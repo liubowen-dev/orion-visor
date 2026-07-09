@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>orion-ops-api</artifactId>
+        <groupId>cn.orionsec.ops</groupId>
+        <version>1.3.1</version>
+    </parent>
+
+    <name>orion-ops-runner</name>
+    <artifactId>orion-ops-runner</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+
+    <dependencies>
+        <!-- service -->
+        <dependency>
+            <groupId>cn.orionsec.ops</groupId>
+            <artifactId>orion-ops-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

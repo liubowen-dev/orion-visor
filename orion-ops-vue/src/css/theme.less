@@ -1,0 +1,65 @@
+/* theme.less - 主题变量定义 */
+
+:root {
+  // 主色调 - 赛博蓝
+  --primary-color: #4f8cff;
+  --primary-hover: #75a8ff;
+  --primary-active: #2e6ef2;
+  --accent-cyan: #35d7ff;
+  --accent-gold: #f5b94c;
+  --accent-green: #39e7c2;
+  
+  // 背景色（深色系统）
+  --bg-global: #06101d;
+  --bg-container: #0d1a2d;
+  --bg-card: #12233d;
+  --bg-hover: #173153;
+  --bg-active: #1d4470;
+  --bg-elevated: #10203a;
+  
+  // 文字颜色
+  --text-primary: rgba(241, 247, 255, 0.96);
+  --text-secondary: rgba(202, 220, 247, 0.88);
+  --text-tertiary: rgba(154, 180, 220, 0.72);
+  --text-disabled: rgba(121, 145, 184, 0.5);
+  --text-accent: #91eaff;
+  
+  // 边框颜色
+  --border-color: #274164;
+  --border-light: #18304f;
+  
+  // 阴影
+  --shadow-sm: 0 12px 28px rgba(2, 8, 20, 0.28);
+  --shadow-md: 0 18px 38px rgba(2, 8, 20, 0.36);
+  --shadow-lg: 0 24px 58px rgba(2, 8, 20, 0.46);
+  
+  // 圆角
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  
+  // 状态色
+  --success-color: #22C55E;
+  --warning-color: #F59E0B;
+  --error-color: #EF4444;
+  --info-color: #3B82F6;
+}
+
+// 暗色主题（可选，通过 body 类切换）
+body.dark {
+  --bg-global: #060A13;
+  --bg-container: #0D1626;
+  --bg-card: #111D31;
+  --bg-hover: #17243B;
+  --bg-active: #1F3254;
+  
+  --text-primary: rgba(245, 250, 255, 0.96);
+  --text-secondary: rgba(211, 225, 247, 0.88);
+  --text-tertiary: rgba(172, 192, 228, 0.75);
+  
+  --border-color: #243A5F;
+  --border-light: #1A2C48;
+  
+  --shadow-sm: 0 10px 28px rgba(0, 0, 0, 0.42);
+  --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.52);
+}

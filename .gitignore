@@ -1,0 +1,90 @@
+# =========================
+# orion-visor Enterprise .gitignore
+# Java + Vue + DevOps
+# =========================
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# --- IDE ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Java / Maven ---
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+replay_pid*
+
+# --- Spring Boot ---
+HELP.md
+application-local.yml
+application-local.properties
+bootstrap-local.yml
+
+# --- Node / Vue ---
+node_modules/
+dist/
+.npm
+.yarn/
+.pnp.*
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# --- Large media (exceed GitHub 100MB limit) ---
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# --- Env & Secrets (CRITICAL) ---
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.jks
+credentials.json
+secrets/
+**/application-secret.yml
+
+# --- DevOps / Runtime ---
+logs/
+*.pid
+*.seed
+tmp/
+temp/
+upload/
+downloads/
+recordings/
+terminal-record/
+sftp-cache/
+docker-data/
+*.dump
+*.sql.bak
+
+# --- Test / Coverage ---
+coverage/
+.nyc_output/
+jacoco.exec
+*.lcov
+
+# --- Misc ---
+*.orig
+*.rej
+.cache/
